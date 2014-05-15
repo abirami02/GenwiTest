@@ -1,66 +1,102 @@
 {
-  "networkID": "45322",
-  "networkTheme": "tile",
+  "networkID": "45329",
+  "networkTheme": "newsfeed",
   "settings": {
     "layoutSettings": []
   },
   "layouts": {
     "article": [
       {
-        "name": "post_tile.html",
+        "name": "deeplink.html",
+        "owner": "GENWI"
+      },
+      {
+        "name": "featured_post.html",
         "owner": "GENWI",
         "default": "true"
       }
     ],
     "articles": [
       {
-        "name": "posts_tile.html",
+        "name": "posts.html",
         "owner": "GENWI",
         "default": "true"
       }
     ],
-    "categories": [],
+    "categories": [
+      {
+        "name": "categories.html",
+        "owner": "GENWI",
+        "default": "true"
+      }
+    ],
     "categorymenu": [
       {
-        "name": "sections_tile.html",
+        "name": "category_menu.html",
         "owner": "GENWI",
         "default": "true"
       }
     ],
     "favorites": [
       {
-        "name": "favorites_tile.html",
+        "name": "saved_items.html",
         "owner": "GENWI",
         "default": "true"
       }
     ],
     "search": [
       {
-        "name": "search_tile.html",
+        "name": "post_search.html",
         "owner": "GENWI",
         "default": "true"
       }
     ],
     "toolbar": [
       {
-        "name": "toolbar_tile.html",
+        "name": "header.html",
         "owner": "GENWI"
       }
     ]
   },
   "customize": {
-    "header": {},
-    "sections": {},
-    "postTitle": {},
-    "postDescription": {},
-    "background": {},
-    "byline": {},
-    "caption": {}
+    "header": {
+      "backgroundColor": "#000000",
+      "fontColor": "#ffffff",
+      "fontFamily": "helvetica"
+    },
+    "sections": {
+      "backgroundColor": "#212121",
+      "backgroundHighlightColor": "#40d4c5",
+      "fontColor": "#ffffff",
+      "fontHighlightColor": "#000000",
+      "fontFamily": "helvetica"
+    },
+    "postTitle": {
+      "fontColor": "#000000",
+      "fontFamily": "helvetica"
+    },
+    "postDescription": {
+      "fontColor": "#000000",
+      "fontFamily": "helvetica"
+    },
+    "background": {
+      "color": "#000000"
+    },
+    "byline": {
+      "fontColor": "#000000",
+      "fontFamily": "helvetica"
+    },
+    "caption": {
+      "fontColor": "#000000",
+      "fontFamily": "helvetica"
+    }
   },
   "navigation": {
     "appHome": {
-      "articlesList": {
-        "categoryID": "101113"
+      "specificCategory": {
+        "categoryID": "ALL CATEGORIES",
+        "layoutName": "categories.html",
+        "layoutOwner": "GENWI"
       }
     }
   },
@@ -100,9 +136,6 @@
           },
           {
             "name": "Tag"
-          },
-          {
-            "name": "Push Notification"
           }
         ],
         "customFields": [
@@ -120,6 +153,18 @@
       },
       {
         "name": "Test",
+        "description": "test",
+        "cmsFields": [],
+        "customFields": [
+          {
+            "name": "siteurl",
+            "type": "HTML LINK",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "name": "AB FILE Test ",
         "description": "test",
         "cmsFields": [
           {
@@ -155,9 +200,15 @@
         ],
         "customFields": [
           {
-            "name": "siteurl",
-            "type": "HTML LINK",
-            "order": 1
+            "name": "Json",
+            "type": "FILE",
+            "order": 1,
+            "properties": {
+              "valid_values": [
+                "*.json",
+                "*.csv"
+              ]
+            }
           }
         ]
       }
