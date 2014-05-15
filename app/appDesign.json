@@ -1,0 +1,166 @@
+{
+  "networkID": "45322",
+  "networkTheme": "tile",
+  "settings": {
+    "layoutSettings": []
+  },
+  "layouts": {
+    "article": [
+      {
+        "name": "post_tile.html",
+        "owner": "GENWI",
+        "default": "true"
+      }
+    ],
+    "articles": [
+      {
+        "name": "posts_tile.html",
+        "owner": "GENWI",
+        "default": "true"
+      }
+    ],
+    "categories": [],
+    "categorymenu": [
+      {
+        "name": "sections_tile.html",
+        "owner": "GENWI",
+        "default": "true"
+      }
+    ],
+    "favorites": [
+      {
+        "name": "favorites_tile.html",
+        "owner": "GENWI",
+        "default": "true"
+      }
+    ],
+    "search": [
+      {
+        "name": "search_tile.html",
+        "owner": "GENWI",
+        "default": "true"
+      }
+    ],
+    "toolbar": [
+      {
+        "name": "toolbar_tile.html",
+        "owner": "GENWI"
+      }
+    ]
+  },
+  "customize": {
+    "header": {},
+    "sections": {},
+    "postTitle": {},
+    "postDescription": {},
+    "background": {},
+    "byline": {},
+    "caption": {}
+  },
+  "navigation": {
+    "appHome": {
+      "articlesList": {
+        "categoryID": "101113"
+      }
+    }
+  },
+  "mappings": {
+    "articleLayoutMapping": [],
+    "categoryLayoutMapping": []
+  },
+  "types": {
+    "postTypes": [
+      {
+        "name": "Tech News Flash",
+        "description": "An important news items from the technology world",
+        "cmsFields": [
+          {
+            "name": "Title"
+          },
+          {
+            "name": "Description"
+          },
+          {
+            "name": "Post Activation Date"
+          },
+          {
+            "name": "Media Link"
+          },
+          {
+            "name": "Category"
+          },
+          {
+            "name": "Sections"
+          },
+          {
+            "name": "Media Images & Misc"
+          },
+          {
+            "name": "Layout Template"
+          },
+          {
+            "name": "Tag"
+          },
+          {
+            "name": "Push Notification"
+          }
+        ],
+        "customFields": [
+          {
+            "name": "siteurl",
+            "type": "HTML LINK",
+            "order": 1
+          },
+          {
+            "name": "author",
+            "type": "SINGLE LINE TEXT",
+            "order": 2
+          }
+        ]
+      },
+      {
+        "name": "Test",
+        "description": "test",
+        "cmsFields": [
+          {
+            "name": "Title"
+          },
+          {
+            "name": "Description"
+          },
+          {
+            "name": "Post Activation Date"
+          },
+          {
+            "name": "Media Link"
+          },
+          {
+            "name": "Category"
+          },
+          {
+            "name": "Sections"
+          },
+          {
+            "name": "Media Images & Misc"
+          },
+          {
+            "name": "Layout Template"
+          },
+          {
+            "name": "Tag"
+          },
+          {
+            "name": "Push Notification"
+          }
+        ],
+        "customFields": [
+          {
+            "name": "siteurl",
+            "type": "HTML LINK",
+            "order": 1
+          }
+        ]
+      }
+    ]
+  }
+}
