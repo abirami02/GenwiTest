@@ -1,0 +1,57 @@
+<script src="../system/newsfeed/js/app_libs.js"></script>
+<script>
+oIP.includeJS('copy_of_app_saved_items.js');
+</script>
+
+<!-- CONTROL_SETTINGS
+objCnt/99
+pObjCnt/99
+lObjCnt/99
+paging/false
+allowRightPanning/true
+allowLeftPanning/false
+-->
+
+<div id="gw_favorites" style="margin-top:44px;"></div>
+
+<script id="gw_favorites_tmpl" type="text/x-handlebars-template">    
+    <ul class="articles nodeList">
+    {{#if isItemNotAvailable}}
+        <li class="emptyFav"><span class="noFavorite">Your favorite list is empty</span></li>
+    {{else}}
+    {{#each articles}}
+        {{#if articleImage}}
+        <li class="articles tabletArticles">
+               <article data-href="javascript:void(0);" ontouchstart="">
+                    <a href="javascript:void(0);" data-href="{{articleLink}}" ontouchstart="">
+                        <div class="details">
+                            <h2>{{articleTitle}}</h2>
+                            <p class="byline">
+                                {{#if articleAuthor}}<em>by</em> <strong>{{articleAuthor}}</strong> | {{/if}}<span class="date">{{articlePubDate}}</span>
+                            </p>
+                            <div class="image">
+                                <img src="{{articleImage}}" />
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        {{else}}
+            <li class="articles tabletArticles noImage">
+                <article data-href="javascript:void(0);" ontouchstart="">
+                    <a href="javascript:void(0);" data-href="{{articleLink}}" ontouchstart="">
+                        <div class="details">
+                            <h2>{{articleTitle}}</h2>
+                            <p class="byline">
+                                {{#if articleAuthor}}<em>by</em> <strong>{{articleAuthor}}</strong> | {{/if}}<span class="date">{{articlePubDate}}</span>
+                            </p>
+                            <p class="articlesDesc">{{{desc}}}</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        {{/if}}
+    {{/each}}
+    {{/if}}
+    </ul>
+</script>

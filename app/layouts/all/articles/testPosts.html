@@ -1,0 +1,83 @@
+<script src="../system/newsfeed/js/app_libs.js"></script>
+<script>
+oIP.includeJS('copy_of_app_posts.js');
+</script>
+
+<!-- CONTROL_SETTINGS
+objCnt/99
+pObjCnt/99
+lObjCnt/99
+paging/false
+allowRightPanning/false
+allowLeftPanning/false
+-->
+
+<div id="gw_articles" style="margin-top:44px;">
+
+</div>
+
+<script id="gw_articles_tmpl" type="text/x-handlebars-template">
+    {{#if nocontent}}
+		<article class="articlesNoContent">
+			<h1 class="_postTitleCustomTheme">There are no Articles/Posts to display. Please check your feed or post settings and please try again.</h1>
+		</article>
+	{{else}}
+		{{#if featuredImage}}
+        <ul class="nodeList" style="width:100%">
+	        <li class="articles tabletFeatured" style="width:100%">
+	            <article data-href="javascript:void(0);" ontouchstart="">
+	                <a href="javascript:void(0);" data-href="{{featuredLink}}" ontouchstart="">
+	                    <h1>{{featuredTitle}}</h1>
+	                    <p class="byline">
+	                        {{#if featuredAuthor}}<em>by</em> <strong>{{featuredAuthor}}</strong> | {{/if}} <span class="date">{{featuredPubDate}}</span>
+	                    </p>
+	                    <div class="articleImg">
+	                        <img src="{{featuredImage}}" />
+	                    </div>
+	                    <p class="tabletFeaturedDesc">{{{featuredDescription}}}</p>
+	                </a>
+	            </article>
+	        </li>
+	    </ul>
+	    {{/if}}
+	    {{#if initialLoad}}    
+	    <ul class="articles nodeList">
+	    {{/if}}    
+	    {{#each articles}}
+	        {{#if articleImage}}
+	            <li class="articles tabletArticles">
+	               <article data-href="javascript:void(0);" ontouchstart="">
+	                    <a href="javascript:void(0);" data-href="{{articleLink}}" ontouchstart="">
+	                        <div class="details">
+	                            <h2>{{articleTitle}}</h2>
+	                            <p class="byline">
+	                                {{#if articleAuthor}}<em>by</em> <strong>{{articleAuthor}}</strong> | {{/if}} <span class="date">{{articlePubDate}}</span>
+	                            </p>
+	                            <div class="image">
+	                                <img src="{{articleImage}}" />
+	                            </div>                            
+	                        </div>
+	                    </a>
+	                </article>
+	            </li>
+	        {{else}}
+	            <li class="articles tabletArticles noImage">
+	                <article data-href="javascript:void(0);" ontouchstart="">
+	                     <a href="javascript:void(0);" data-href="{{articleLink}}" ontouchstart="">
+	                        <div class="details">
+	                            <h2>{{articleTitle}}</h2>
+	                            <p class="byline">
+	                                {{#if articleAuthor}}<em>by</em> <strong>{{articleAuthor}}</strong> | {{/if}} <span class="date">{{articlePubDate}}</span>
+	                            </p>
+	                            <p class="articlesDesc">{{{desc}}}</p>
+	                        </div>
+	                    </a>
+	                </article>
+	            </li>
+	        {{/if}}
+	    {{/each}}
+	    {{#if initialLoad}}    
+	    </ul>
+	    {{/if}}
+	{{/if}}    
+</script>

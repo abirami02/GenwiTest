@@ -1,0 +1,35 @@
+<script src="../system/newsfeed/js/app_libs.js"></script>
+<script>
+oIP.includeJS('copy_of_app_header.js');
+oIP.registerSettings('{"name":"header", "type":"toolbar", "tablet":{"landscape":{"height": "44","x": "0","y": "0"},"portrait": {"height": "44","x":"0","y": "0"},"display": "block", "position":"top", "transparent":"false"}, "smartphone": {"landscape": {"height": "44","x": "0","y": "0"},"portrait": {"height": "44","x": "0","y":"0"},"display": "block", "position":"top", "transparent":"false"}}');
+</script>
+
+<style>
+    .btnMenu,.share,.favorite{
+        display:none;
+    }
+</style>
+
+<!-- CONTROL_SETTINGS 
+objCnt/99 
+pObjCnt/99 
+lObjCnt/99 
+paging/false 
+allowRightPanning/false 
+allowLeftPanning/false 
+-->
+
+<div id="gw_toolbar" class="_headerCustomTheme _brandingLarge"></div>
+
+<script id="gw_toolbar_tmpl" type="text/x-handlebars-template">
+    <a href = "{{link}}" class="btnMenu" ontouchstart="" id="btnContainer"></a>
+    <span class="title" id="titleContainer">
+        <div class="sectionColor" id="sectionLabel" style="background-color:{{color}};display:none;"></div>
+        <div id="logoCustomise" class="_brandingSmall"></div>
+        <h1 id="appTitle"> {{title}} </h1>
+    </span >
+    <a href="javascript:void(0);" class="share" ontouchstart=""></a>
+    {{#if favIconRequired}}
+    <a href="javascript:void(0);" class="favorite" ontouchstart=""></a>
+    {{/if}}
+</script>

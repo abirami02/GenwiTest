@@ -14,6 +14,9 @@
         "name": "featured_post.html",
         "owner": "GENWI",
         "default": "true"
+      },
+      {
+        "name": "testPost.html"
       }
     ],
     "articles": [
@@ -21,6 +24,9 @@
         "name": "posts.html",
         "owner": "GENWI",
         "default": "true"
+      },
+      {
+        "name": "testPosts.html"
       }
     ],
     "categories": [
@@ -28,6 +34,9 @@
         "name": "categories.html",
         "owner": "GENWI",
         "default": "true"
+      },
+      {
+        "name": "testCat.html"
       }
     ],
     "categorymenu": [
@@ -35,6 +44,9 @@
         "name": "category_menu.html",
         "owner": "GENWI",
         "default": "true"
+      },
+      {
+        "name": "testSections.html"
       }
     ],
     "favorites": [
@@ -42,6 +54,9 @@
         "name": "saved_items.html",
         "owner": "GENWI",
         "default": "true"
+      },
+      {
+        "name": "testFav.html"
       }
     ],
     "search": [
@@ -49,12 +64,18 @@
         "name": "post_search.html",
         "owner": "GENWI",
         "default": "true"
+      },
+      {
+        "name": "testSearch.html"
       }
     ],
     "toolbar": [
       {
         "name": "header.html",
         "owner": "GENWI"
+      },
+      {
+        "name": "testHeader.html"
       }
     ]
   },
@@ -136,6 +157,9 @@
           },
           {
             "name": "Tag"
+          },
+          {
+            "name": "Push Notification"
           }
         ],
         "customFields": [
@@ -154,7 +178,38 @@
       {
         "name": "Test",
         "description": "test",
-        "cmsFields": [],
+        "cmsFields": [
+          {
+            "name": "Title"
+          },
+          {
+            "name": "Description"
+          },
+          {
+            "name": "Post Activation Date"
+          },
+          {
+            "name": "Media Link"
+          },
+          {
+            "name": "Category"
+          },
+          {
+            "name": "Sections"
+          },
+          {
+            "name": "Media Images & Misc"
+          },
+          {
+            "name": "Layout Template"
+          },
+          {
+            "name": "Tag"
+          },
+          {
+            "name": "Push Notification"
+          }
+        ],
         "customFields": [
           {
             "name": "siteurl",

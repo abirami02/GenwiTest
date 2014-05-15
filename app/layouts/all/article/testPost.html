@@ -1,0 +1,66 @@
+<script src="../system/newsfeed/js/app_libs.js"></script>
+<script src="../system/newsfeed/js/app_basepost.js"></script>
+
+<script>
+oIP.includeJS('copy_of_app_colpost.js');
+</script>
+
+<!-- CONTROL_SETTINGS
+objCnt/1
+pObjCnt/1
+lObjCnt/1
+paging/true
+allowRightPanning/false
+allowLeftPanning/false
+-->
+
+<div id="gw_article" style="height:100%;overflow:auto;margin-top:44px;" class="_pageContainerCustomTheme"></div>
+
+<script id="gw_article_tmpl" type="text/x-handlebars-template"> 
+<div class="feature">
+    <div class="target"></div>
+</div>
+
+<section id="flowedContent" class="article">
+     {{{description}}}
+</section>
+
+<section id="fixedContent">
+    <div class="boxed article articleImg col-span-2" id="fullPageFeaturedPage">
+        
+        {{#if video}}
+            {{#if image}}
+                <div class="articleImg featuredImg">
+                    <a href="javascript:void(0)" data-href="{{video}}"class="Tapping video"> <img class='firstArtPage' id="fullPageFeatured" src="{{image}}" />
+                        <div class="video_overlay"></div>
+                    </a>
+                </div>
+            {{/if}}
+        {{else}}
+            {{#if image}}
+                <div class="articleImg featuredImg">
+                    <a href="javascript:void(0)" class="Tapping"> <img class='firstArtPage' id="fullPageFeatured" src="{{image}}" /> 
+                        <div class="slideshowOverlay">
+                            <button ontouchstart="">
+                                <span></span>
+                            </button>
+                        </div>
+                    </a>        
+                </div>
+            {{/if}}
+        {{/if}}        
+        <h1 class="_postTitleCustomTheme">{{item_title}}</h1>
+        <p class="byline _postByLineCustomTheme">
+            {{#if author}}<em>by</em> <strong>{{author}}</strong> | {{/if}}<span class="date">{{p_date}}</span>
+        </p>
+    </div>
+    
+    <div class='adunit2 adunit_portrait boxed attach-page-1 col-span-1 anchor-top-right' style="width:300px;height:250px;"></div>
+    <div class='adunit2 adunit_landscape boxed attach-page-2 col-span-1 anchor-top-right' style="width:300px;height:250px;"></div>
+    
+</section>
+
+<div class="pagination" id="pagination">
+    <ul></ul>
+</div>
+</script>

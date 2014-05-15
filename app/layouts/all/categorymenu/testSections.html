@@ -1,0 +1,64 @@
+<script src="../system/newsfeed/js/app_libs.js"></script>
+<script>
+oIP.includeJS('copy_of_app_category_menu.js');
+oIP.registerSettings('{"name":"category_menu","type":"sections","style":"1","fetchData":"false","ignoreCategory":"true","tablet":{ "landscape":{"width":"250","x":"0","y":"0"},"portrait":{"width":"250","x":"0","y":"0"}},"smartphone":{"landscape":{"width":"230","x":"0","y":"0"},"portrait":{"width":"230","x":"0","y":"0"}}}');
+</script>
+
+<!-- CONTROL_SETTINGS
+objCnt/99
+pObjCnt/99
+lObjCnt/99
+paging/false
+allowRightPanning/false
+allowLeftPanning/false
+-->
+
+<div id="gw_sections">
+</div>
+
+<script id="gw_sections_tmpl" type="text/x-handlebars-template">
+<div id="gw_category_menu" class="sectionMenu _sectionsCustomTheme">
+    <ul>
+        {{#if searchRequired}}
+        <li class="_sectionsCustomTheme">
+            <form id="search_form" onsubmit="return false;">
+                <input name="search" id="search" type='search' value="" maxlength='255' />
+                <span class="searchIndicator"><img src="images/ajax_loader.gif" style="width:auto;display:none;"/></span>
+            </form>
+        </li>
+        {{/if}}
+        <li>
+            <a href="{{homepage}}" class="_sectionsCustomTheme" ontouchstart="">Home</a>
+        </li>
+        {{#each sections}}
+        {{#if hasSubCat}}
+        <li class="parentSubcats">
+            <a href="{{sectionLink}}" class="_sectionsCustomTheme showSubcats" ontouchstart="">{{sectionTitle}}</a>
+            <span class="plus_minus">+</span>
+            <div class="sub_sections" style="display:none">
+                <ul> 
+	            	{{#each sectionSubCats}}
+	            	<li class="newssubcats">
+	                	<a href="{{sectionLink}}" class="_sectionsCustomTheme" ontouchstart="">{{sectionTitle}}</a>
+	            	</li>
+	            	{{/each}}
+	            </ul>
+	        </div>
+        </li>
+        {{else}}
+			<li>
+            	<a href="{{sectionLink}}" class="_sectionsCustomTheme" ontouchstart="">{{sectionTitle}}</a>
+           </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+    {{#if favLinkRequired}}
+    <div class="divider _sectionsCustomTheme" style="display:none;"></div>
+    <ul class="hideFavLink">
+        <li>
+            <a href="{{favorites}}" class="_sectionsCustomTheme" ontouchstart=""><span class="savedItems"></span>Saved Items</a>
+        </li>
+    </ul>   
+    {{/if}}
+</div>
+</script>
