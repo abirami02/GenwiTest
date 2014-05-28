@@ -1,5 +1,5 @@
 {
-  "networkID": "45329",
+  "networkID": "45286",
   "networkTheme": "newsfeed",
   "settings": {
     "layoutSettings": []
@@ -14,9 +14,6 @@
         "name": "featured_post.html",
         "owner": "GENWI",
         "default": "true"
-      },
-      {
-        "name": "testPost.html"
       }
     ],
     "articles": [
@@ -24,9 +21,6 @@
         "name": "posts.html",
         "owner": "GENWI",
         "default": "true"
-      },
-      {
-        "name": "testPosts.html"
       }
     ],
     "categories": [
@@ -34,9 +28,6 @@
         "name": "categories.html",
         "owner": "GENWI",
         "default": "true"
-      },
-      {
-        "name": "testCat.html"
       }
     ],
     "categorymenu": [
@@ -44,9 +35,6 @@
         "name": "category_menu.html",
         "owner": "GENWI",
         "default": "true"
-      },
-      {
-        "name": "testSections.html"
       }
     ],
     "favorites": [
@@ -54,9 +42,6 @@
         "name": "saved_items.html",
         "owner": "GENWI",
         "default": "true"
-      },
-      {
-        "name": "testFav.html"
       }
     ],
     "search": [
@@ -64,24 +49,18 @@
         "name": "post_search.html",
         "owner": "GENWI",
         "default": "true"
-      },
-      {
-        "name": "testSearch.html"
       }
     ],
     "toolbar": [
       {
         "name": "header.html",
         "owner": "GENWI"
-      },
-      {
-        "name": "testHeader.html"
       }
     ]
   },
   "customize": {
     "header": {
-      "backgroundColor": "#000000",
+      "backgroundColor": "#828287",
       "fontColor": "#ffffff",
       "fontFamily": "helvetica"
     },
@@ -101,7 +80,7 @@
       "fontFamily": "helvetica"
     },
     "background": {
-      "color": "#000000"
+      "color": "#ffffff"
     },
     "byline": {
       "fontColor": "#000000",
@@ -219,7 +198,50 @@
         ]
       },
       {
-        "name": "AB FILE Test ",
+        "name": "AB-Test",
+        "description": "Test post type",
+        "cmsFields": [
+          {
+            "name": "Title"
+          },
+          {
+            "name": "Description"
+          },
+          {
+            "name": "Post Activation Date"
+          },
+          {
+            "name": "Media Link"
+          },
+          {
+            "name": "Category"
+          },
+          {
+            "name": "Sections"
+          },
+          {
+            "name": "Media Images & Misc"
+          },
+          {
+            "name": "Layout Template"
+          },
+          {
+            "name": "Tag"
+          },
+          {
+            "name": "Push Notification"
+          }
+        ],
+        "customFields": [
+          {
+            "name": "image",
+            "type": "IMAGE",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "name": "Content Posts",
         "description": "test",
         "cmsFields": [
           {
@@ -255,15 +277,9 @@
         ],
         "customFields": [
           {
-            "name": "Json",
+            "name": "file",
             "type": "FILE",
-            "order": 1,
-            "properties": {
-              "valid_values": [
-                "*.json",
-                "*.csv"
-              ]
-            }
+            "order": 1
           }
         ]
       }
